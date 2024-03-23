@@ -16,24 +16,7 @@ module tt_um_counter (
   // assign uio_out = 0;
   // assign uio_oe  = 0;		
   
-    counter #(.bits(4)) c1 (.clk(uio_in[7]), .rst(uio_in[6]), .select(uio_in[4]), .count(uio_out[3:0]));
-
-    assign uio_oe = 8'b00001111;
-    assign uio_out[4] = 1'b0;
-    assign uio_out[5] = 1'b0;
-    assign uio_out[6] = 1'b0;
-    assign uio_out[7] = 1'b0;
-    assign uo_out[7:0] = 8'b00000000;
-   		     
-endmodule
-
-    counter #(.bits(4)) c1 (.clk(uio_in[7]), .rst(uio_in[6]), .select(uio_in[5]), .count(uio_out[3:0]));
-                         
-    assign uio_oe = 8'b00001111;
-    assign uio_out[7:4] = 4'b0000;
-    assign uo_out[7:0] = 8'b00000000;
-
-endmodule
+   
 
     counter #(.bits(4)) c1 (.clk(clk), .rst(~rst_n), .select(ui_in[0]), .count(uo_out[3:0]));
     assign uio_oe = 8'b00000000;
