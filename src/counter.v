@@ -1,4 +1,4 @@
-module counter #(parameter bits=4)(
+module counter #(parameter bits=8)(
 				input clk, 
 				input rst, 
 				input select, 
